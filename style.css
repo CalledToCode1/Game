@@ -18,11 +18,30 @@ p {
 
 
 .canvas-wrapper {
-    padding-left: 39%;
-}
-
-canvas {
+    position: relative;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+canvas {
+    background-color:rgb(255, 255, 255);
+}
+
+#myCanvas {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 0;
+    postion: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+#foregroundCanvas {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
 }
