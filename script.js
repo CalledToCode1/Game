@@ -44,3 +44,6 @@ window.addEventListener("keydown", (e) => {
     drawBackground();
     drawPlayer();
 });
+
+drawBackground();
+drawPlayer();
