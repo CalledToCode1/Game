@@ -16,6 +16,8 @@ p {
     color:black;
 }
 
+
 .canvas-wrapper {
-    padding-left: 300px;
+    display: block;
+    margin: 0 auto;
 }
