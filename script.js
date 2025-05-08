@@ -9,6 +9,7 @@ const fgCtx = playerCanvas.getContext("2d");
 
 let playerX = 150;
 let playerY = 150;
+
 const playerWidth = 50;
 const playerHeight = 50;
 const playerSpeed = 5;
@@ -18,26 +19,26 @@ function drawBackground() {
     bgCtx.fillRect(0, 0, bgCanvas.width, bgCanvas.height);
 }
 
-function drawPlayer()
+function drawPlayer(x, y)
 {
     fgCtx.clearRect(0, 0, playerCanvas.width, playerCanvas.height);
-    fgCtx.fillStyle = "light blue";
-    fgCtx.fillRect(playerX, playerY, playerWidth, playerHeight);
+    fgCtx.fillStyle = "white";
+    fgCtx.fillRect(x, y, playerWidth, playerHeight);
 }
 
 window.addEventListener("keydown", (e) => {
     switch(e.key) {
         case "w":
-            if (playerY > 0) playerY -= playerSpeed;
+            if (y > 0) y -= playerSpeed;
             break;
         case "s":
-            if (playerY < bgCanvas.height - playerHeight) playerY += playerSpeed;
+            if (y < bgCanvas.height - playerHeight) y += playerSpeed;
             break;
         case "a":
-            if (playerX > 0) playerX -= playerSpeed;
+            if (x > 0) x -= playerSpeed;
             break;
         case "d":
-            if (playerX < bgCanvas.width - playerWidth) playerY += playerSpeed;
+            if (x < bgCanvas.width - playerWidth) x += playerSpeed;
             break;
     }
 
@@ -46,4 +47,4 @@ window.addEventListener("keydown", (e) => {
 });
 
 drawBackground();
-drawPlayer();
+drawPlayer(100, 100);
