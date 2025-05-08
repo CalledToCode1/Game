@@ -20,3 +20,7 @@ p {
 .canvas-wrapper {
     padding-left: 38%;
 }
+
+canvas {
+    background-color: white;
+}
