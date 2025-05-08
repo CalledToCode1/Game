@@ -10,9 +10,11 @@
     <body>
         <h1>Welcome to my Website!</h1>
         <p>Experiences (coming soon!): </p>
-        <canvas id="myCanvas" width="400" height="200" style="border:2px solid #000000;">
+        <div class="canvas-wrapper">
+            <canvas id="myCanvas" width="400" height="200" style="border:2px solid #000000;">
             
-        </canvas>
+            </canvas>
+        </div>
 
         <script>
             var c = document.getElementById("myCanvas");
@@ -22,6 +24,7 @@
             ctx.lineTo(400, 200);
             ctx.stroke();
         </script>
-        
+
     </body>
+    
 </html>
