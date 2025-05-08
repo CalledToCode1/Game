@@ -15,7 +15,7 @@ const playerHeight = 50;
 const playerSpeed = 5;
 
 function drawBackground() {
-    bgCtx.fillStyle = "white";
+    bgCtx.fillStyle = rgb(127, 255, 0);
     bgCtx.fillRect(0, 0, bgCanvas.width, bgCanvas.height);
 }
 
