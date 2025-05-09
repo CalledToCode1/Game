@@ -12,6 +12,7 @@ let y = 150;
 
 const playerWidth = 50;
 const playerHeight = 50;
+
 const playerSpeed = 5;
 
 function drawBackground() {
@@ -19,11 +20,13 @@ function drawBackground() {
     bgCtx.fillRect(0, 0, bgCanvas.width, bgCanvas.height);
 }
 
-function drawPlayer(x, y)
+function drawPlayer()
 {
+    playerCanvas.style.left = `${x}px`;
+    playerCanvas.style.top = `${y}px`
     fgCtx.clearRect(0, 0, playerCanvas.width, playerCanvas.height);
     fgCtx.fillStyle = "rgb(127, 255, 0)";
-    fgCtx.fillRect(x, y, playerWidth, playerHeight);
+    fgCtx.fillRect(0, 0, playerWidth, playerHeight);
 }
 
 window.addEventListener("keydown", (e) => {
@@ -42,9 +45,8 @@ window.addEventListener("keydown", (e) => {
             break;
     }
 
-    drawBackground();
-    drawPlayer(x, y);
+    drawPlayer();
 });
 
 drawBackground();
-drawPlayer(x, y);
+drawPlayer();
