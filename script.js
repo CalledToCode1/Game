@@ -7,22 +7,22 @@ const playerCanvas = document.getElementById("foregroundCanvas");
 const bgCtx = bgCanvas.getContext("2d");
 const fgCtx = playerCanvas.getContext("2d");
 
-let playerX = 150;
-let playerY = 150;
+let x = 150;
+let y = 150;
 
 const playerWidth = 50;
 const playerHeight = 50;
 const playerSpeed = 5;
 
 function drawBackground() {
-    bgCtx.fillStyle = rgb(127, 255, 0);
+    bgCtx.fillStyle = "white";
     bgCtx.fillRect(0, 0, bgCanvas.width, bgCanvas.height);
 }
 
 function drawPlayer(x, y)
 {
     fgCtx.clearRect(0, 0, playerCanvas.width, playerCanvas.height);
-    fgCtx.fillStyle = "white";
+    fgCtx.fillStyle = "rgb(127, 255, 0)";
     fgCtx.fillRect(x, y, playerWidth, playerHeight);
 }
 
@@ -43,8 +43,8 @@ window.addEventListener("keydown", (e) => {
     }
 
     drawBackground();
-    drawPlayer();
+    drawPlayer(x, y);
 });
 
 drawBackground();
-drawPlayer(100, 100);
+drawPlayer(x, y);

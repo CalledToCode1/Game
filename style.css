@@ -25,22 +25,21 @@ p {
 }
 
 canvas {
-    background-color:rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
 }
 
 #backgroundCanvas {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     z-index: 0;
-    top: 0;
-    bottom: 0;
+    
 }
 
 #foregroundCanvas {
     z-index: 1;
-    top: 0;
-    left: 0;
     pointer-events: none;
-    background-color: chartreuse;
+    background-color: transparent;
 }
