@@ -11,13 +11,13 @@ var gameLoop;
 var player;
 
 window.onload = function() {
-    canvas = document.getElementById("myCanvas"); //make sure this works ============
+    canvas = document.getElementById("bgCanvas"); //make sure this works ============
     ctx = canvas.getContext("2d");
 
     //inputs set up
     setupInputs();
 
-    player = new Player(50, 200); //created player
+    player = new Player(50, 50); //created player
 
     //start game loop
     gameLoop = setInterval(step, 1000/30); //1 second divided by 30
