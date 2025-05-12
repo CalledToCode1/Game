@@ -4,7 +4,7 @@ function Player(x, y){ //a constructor (i think)
     this.xSpeed = 0;
     this.ySpeed = 0;
     this.friction = 0.6;
-    this.maxSpeed = 1; //change as needed
+    this.maxSpeed = 10; //change as needed
     this.width = 50;
     this.height = 50;
     this.active = true;
