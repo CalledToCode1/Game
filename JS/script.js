@@ -20,8 +20,8 @@ window.onload = function() {
     player = new Player(50, 50); //created player
 
     //start game loop
-    gameLoop = setInterval(step, 1000/60); //1 second divided by 30
-    //so basically fps?
+    gameLoop = setInterval(step, 1000/60); //fps
+    
 }
 
 function step() { //will also be used for other objects
