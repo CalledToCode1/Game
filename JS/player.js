@@ -4,9 +4,9 @@ function Player(x, y){ //a constructor (i think)
     this.xSpeed = 0;
     this.ySpeed = 0;
     this.friction = 0.6;
-    this.maxSpeed = 10;
+    this.maxSpeed = 7;
     this.width = 50;
-    this.height = 100;
+    this.height = 50;
     this.active = true;
 
     this.step = function(){
