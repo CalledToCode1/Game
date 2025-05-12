@@ -39,7 +39,7 @@ function Player(x, y){ //a constructor (i think)
     }
 
     this.draw = function(){
-        ctx.fillStyle= "yellow";
+        ctx.fillStyle= "blue";
         ctx.fillRect(this.x, this.y, this.width, this.height); //this.x because it will be changing in the future
     }
 }
