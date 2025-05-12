@@ -32,7 +32,15 @@ function Player(x, y){ //a constructor (i think)
             } else if (downKey) {
                 this.ySpeed++;
             }
-            //Correct Speed
+            //Vertical Movement
+            if (upKey) {
+                //Check if on ground
+                this.ySpeed -= 15;
+            }
+
+            //Apply Gravity
+            this.ySpeed += 5;
+            // x Correct Speed
             if (this.xSpeed > this.maxSpeed) {
 
                 this.xSpeed = this.maxSpeed;
@@ -40,7 +48,19 @@ function Player(x, y){ //a constructor (i think)
             } else if (this.xSpeed < this.maxSpeed) {
 
                 this.xSpeed = this.maxSpeed;
-                
+
+            }
+
+            // y correct speed
+
+            if (this.ySpeed > this.maxSpeed) {
+
+                this.ySpeed = this.maxSpeed;
+
+            } else if (this.ySpeed < this.maxSpeed) {
+
+                this.ySpeed = this.maxSpeed;
+
             }
 
             this.x += this.xSpeed;
