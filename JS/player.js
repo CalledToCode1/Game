@@ -15,17 +15,26 @@ function Player(x, y){ //a constructor (i think)
             //Horizontal Movement
             if (!leftKey && !rightKey || leftKey && rightKey) {
                 //Slow Down
-                this.xspeed *= this.friction; // why does it multiply? //friction coefficient ig i dunno
+                this.xSpeed *= this.friction; // why does it multiply? //friction coefficient ig i dunno
             } else if (rightKey ){
                 //Move Right
                 this.xSpeed++;
             } else if (leftKey) {
-                this.ySpeed--;
+                this.xSpeed--;
             }
             //Vertical Movement
-
+            if (!upKey && !downKey || upKey && downKey) {
+                //Slow Down
+                this.ySpeed *= this.friction; // why does it multiply? //friction coefficient ig i dunno
+            } else if (rightKey ){
+                //Move Right
+                this.ySpeed++;
+            } else if (leftKey) {
+                this.ySpeed--;
+            }
             //Correct Speed
             this.x += this.xSpeed;
+            this.y += this.ySpeed;
         }
     }
 

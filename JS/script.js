@@ -2,10 +2,10 @@ var canvas;
 var ctx;
 
 //input variables
-var upKey;
-var rightKey;
-var downKey;
-var leftKey;
+var upKey = false;
+var rightKey = false;
+var downKey = false;
+var leftKey = false;
 
 var gameLoop;
 var player;
@@ -35,7 +35,7 @@ function step() { //will also be used for other objects
 function draw() {
     //clear the canvas
     ctx.fillStyle = "black";
-    ctx.fillRect(0, 0, 50, 50);
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     //draw player
     player.draw();
@@ -54,7 +54,7 @@ function setupInputs() {
         }
     });
 
-    document.addEventListener("keyUp", function(event) {
+    document.addEventListener("keyup", function(event) {
         if (event.key === "w" || event.key === "ArrowUp") {
             upKey = false;
         } else if (event.key === "a" || event.key === "ArrowLeft") {
