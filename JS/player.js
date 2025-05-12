@@ -33,6 +33,16 @@ function Player(x, y){ //a constructor (i think)
                 this.ySpeed++;
             }
             //Correct Speed
+            if (this.xSpeed > this.maxSpeed) {
+
+                this.xSpeed = this.maxSpeed;
+
+            } else if (this.xSpeed < this.maxSpeed) {
+
+                this.xSpeed = this.maxSpeed;
+                
+            }
+
             this.x += this.xSpeed;
             this.y += this.ySpeed;
         }
