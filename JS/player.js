@@ -28,9 +28,9 @@ function Player(x, y){ //a constructor (i think)
                 this.ySpeed *= this.friction; // why does it multiply? //friction coefficient ig i dunno
             } else if (upKey ){
                 //Move Right
-                this.ySpeed++;
+                this.ySpeed--; //flipped for some reason
             } else if (downKey) {
-                this.ySpeed--;
+                this.ySpeed++;
             }
             //Correct Speed
             this.x += this.xSpeed;
