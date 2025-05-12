@@ -45,7 +45,7 @@ function Player(x, y){ //a constructor (i think)
 
                 this.xSpeed = this.maxSpeed;
 
-            } else if (this.xSpeed < this.maxSpeed) {
+            } else if (this.xSpeed < -this.maxSpeed) {
 
                 this.xSpeed = this.maxSpeed;
 
@@ -57,7 +57,7 @@ function Player(x, y){ //a constructor (i think)
 
                 this.ySpeed = this.maxSpeed;
 
-            } else if (this.ySpeed < this.maxSpeed) {
+            } else if (this.ySpeed < -this.maxSpeed) {
 
                 this.ySpeed = this.maxSpeed;
 
