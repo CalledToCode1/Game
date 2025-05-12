@@ -26,10 +26,10 @@ function Player(x, y){ //a constructor (i think)
             if (!upKey && !downKey || upKey && downKey) {
                 //Slow Down
                 this.ySpeed *= this.friction; // why does it multiply? //friction coefficient ig i dunno
-            } else if (rightKey ){
+            } else if (upKey ){
                 //Move Right
                 this.ySpeed++;
-            } else if (leftKey) {
+            } else if (downKey) {
                 this.ySpeed--;
             }
             //Correct Speed
