@@ -9,6 +9,7 @@ var leftKey = false;
 
 var gameLoop;
 var player;
+var borders = [];
 
 window.onload = function() {
     canvas = document.getElementById("bgCanvas"); //make sure this works ============
@@ -18,6 +19,12 @@ window.onload = function() {
     setupInputs();
 
     player = new Player(50, 50); //created player
+
+    //Create Borders (changing later)
+    for (let i = 0; i < 6; i++)
+    {
+        borders.push(new Border(0 + 100 * i, 720, 100, 100, 1));
+    }
 
     //start game loop
     gameLoop = setInterval(step, 1000/60); //fps
@@ -39,6 +46,11 @@ function draw() {
 
     //draw player
     player.draw();
+    //draw borders
+    for (let i = 0; i < borders.length; i++)
+    {
+        borders[i].draw()
+    }
 }
 
 function setupInputs() {
