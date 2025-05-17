@@ -39,7 +39,7 @@ function Player(x, y){ //a constructor (i think)
             }
 
             //Apply Gravity
-            this.ySpeed += 5;
+            //========================this.ySpeed += 5;
             // x Correct Speed
             if (this.xSpeed > this.maxSpeed) {
 
