@@ -43,7 +43,8 @@ function draw() {
     //clear the canvas
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-
+    ctx.canvas.width = window.innerWidth;// just testing
+    ctx.canvas.height = window.innerHeight;// just testing
     //draw player
     player.draw();
     //draw borders

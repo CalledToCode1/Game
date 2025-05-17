@@ -4,6 +4,8 @@ body {
     padding: 0;
     background-color:rgb(2, 59, 67);
     text-align: center;
+    width: 100%; /*test these 2 lines*/
+    height: 100%;
 
 }
 
